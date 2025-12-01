@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container my-5">
+    <div class="row g-4">
+        {% for fact in facts %}
+        <div class="col-md-6">
+            <div class="card h-100 shadow fact-card">
+                {% if fact.img %}
+                <img src="{{ fact.img }}" class="card-img-top" alt="image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ fact.title }}</h5>
+                    <p class="card-text">{{ fact.text }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

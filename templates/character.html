@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container my-5">
+
+    <h1 class="text-center mb-5">Персонажи по фильмам</h1>
+
+    {% for movie in movies %}
+        <h2 class="mb-4">{{ movie.title }}</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            {% for p in movie.characters %}
+            <div class="col">
+                <div class="card character-card h-100">
+                    <img src="{{ p.img }}" class="card-img-top" alt="{{ p.name }}">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ p.name }}</h5>
+
+                        <button class="btn btn-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#{{ p.id }}Modal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <hr class="my-5" style="opacity: 0.2;">
+    {% endfor %}
+</div>
+
+
+{% for movie in movies %}
+    {% for p in movie.characters %}
+        <div class="modal fade" id="{{ p.id }}Modal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-spider">
+              <div class="modal-header">
+                <h2 class="modal-title">{{ p.name }}</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <div class="modal-body text-center">
+                <img src="{{ p.img }}" class="img-fluid rounded mb-3" style="max-height: 350px; object-fit: cover;">
+                <p>{{ p.desc }}</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% endfor %}
+{% endblock %}

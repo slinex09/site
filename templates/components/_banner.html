@@ -1,0 +1,12 @@
+<div class="banner">
+    <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner">
+            {% for img in banner_images %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                <div class="banner-bg" style="background-image: url('{{ img }}');"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <h1 class="banner-title">{{ banner_title }}</h1>
+</div>

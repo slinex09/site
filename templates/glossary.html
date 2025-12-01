@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container my-5">
+    <div class="row g-4">
+        {% for item in glossary %}
+        <div class="col-md-6">
+            <div class="card h-100 shadow fact-card">
+
+                {% if item.img %}
+                <img src="{{ item.img }}" class="card-img-top" alt="{{ item.alt }}">
+                {% endif %}
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.text }}</p>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+<div class="container text-center my-5">
+    <img src="/static/logo.png" alt="фото" class="glossary-image">
+</div>
+{% endblock %}
