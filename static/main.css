@@ -344,3 +344,27 @@ footer {
     object-fit: cover; 
     border-radius: 10px;
 }
+@media (max-width: 768px) {
+    .story-block {
+        flex-direction: column;       /* Картинка сверху */
+        text-align: center;           /* Заголовки и текст по центру */
+    }
+
+    .story-image img {
+        max-width: 100%;              /* Фото растягивается под ширину */
+        margin: 0 auto;
+    }
+
+    .story-text {
+        text-align: left;             /* Текст читабельный */
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

@@ -4,9 +4,9 @@ from movies import movies
 from facts import facts
 from glossary import glossary
 banner_images = [
-    "/static/banner3.jpg",
-    "/static/banner1.jpg",
-    "/static/banner2.jpg",
+    "/static/image/banner3.jpg",
+    "/static/image/banner1.jpg",
+    "/static/image/banner2.jpg",
 ]
 nav = [
     { "title": "Главная", "URL": "/" },
