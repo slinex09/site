@@ -335,14 +335,9 @@ footer {
 }
 /* about */
 .photo{
-    max-width: 225px; 
+    max-width: 300px; 
+    max-height: 300px;
     margin: 0 auto;
-}
-.photo1{
-    height: auto; 
-    width: 100%; 
-    object-fit: cover; 
-    border-radius: 10px;
 }
 /*
       АДАПТИВ ДЛЯ МОБ. УСТРОЙСТВ
@@ -444,10 +439,6 @@ footer {
 */
     .photo {
         max-width: 80% !important;
-    }
-    .photo1 {
-        width: 100% !important;
-        height: auto !important;
     }
     h1, h2, h3 {
         text-align: center !important;
