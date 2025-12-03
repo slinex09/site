@@ -1,11 +1,10 @@
 @font-face {
-font-family: 'spider';
-src: url('/static/fonts/spider.otf') format('opentype'),
-url('/static/fonts/spider.otf') format('opentype'),
-url('/static/fonts/spider.otf') format('truetype');
-font-style: normal;
-font-display: swap;
+    font-family: 'spider';
+    src: url('/static/fonts/spider.otf') format('opentype');
+    font-style: normal;
+    font-display: swap;
 }
+
 /* ====== АКТИВНЫЙ ПУНКТ МЕНЮ ====== */
 .active {
     background-color: #5c0910;
@@ -32,23 +31,25 @@ body {
     border-bottom: none !important;
     box-shadow: none !important;
     background:
-       linear-gradient(
+        linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0.3) 0%,
             rgba(0, 0, 0, 0.1) 10%,
             rgba(0, 0, 0, 0) 20%
         ),
-        /* Боковая виньетка */
-         radial-gradient(
-        circle, 
-        rgba(0, 0, 0, 0) 50%,   /* центр полностью прозрачный */
-        rgba(0, 0, 0, 0.1) 85%, /* мягкое затемнение ближе к краям */
-        rgba(0, 0, 0, 0.3) 100% /* сильно затемнённые края */
-    );
+        radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.1) 85%,
+            rgba(0, 0, 0, 0.3) 100%
+        );
 }
-h1{
+
+h1,
+h2 {
     font-family: 'Russo One', sans-serif;
 }
+
 /* ====== БАННЕР ====== */
 .banner {
     height: 300px;
@@ -63,24 +64,19 @@ h1{
     content: "";
     position: absolute;
     inset: 0;
-      background:
-        /* Верхняя виньетка */
+    background:
         linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0.75) 0%,
             rgba(0, 0, 0, 0.35) 20%,
             rgba(0, 0, 0, 0) 40%
         ),
-
-        /* Нижняя виньетка */
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.75) 0%,  
+            rgba(0, 0, 0, 0.75) 0%,
             rgba(0, 0, 0, 0.35) 20%,
             rgba(0, 0, 0, 0) 40%
         ),
-
-        /* Боковая виньетка */
         radial-gradient(
             circle,
             rgba(0, 0, 0, 0) 25%,
@@ -88,7 +84,7 @@ h1{
             rgba(0, 0, 0, 0.85) 80%,
             rgba(0, 0, 0, 1) 100%
         );
-    pointer-events: none;   
+    pointer-events: none;
     z-index: 2;
 }
 
@@ -97,10 +93,10 @@ h1{
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .banner-title {
-    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -114,49 +110,38 @@ h1{
     font-size: 75px;
     font-family: 'spider', cursive;
     color: rgb(218, 46, 58);
-    background: none;
     border-radius: 10px;
     text-shadow:
         -0.6px -0.6px 0 yellow,
-         0.6px -0.6px 0 yellow,
-        -0.6px  0.6px 0 yellow,
-         0.6px  0.6px 0 yellow,
-         0.2px  2px rgb(212, 28, 28),
-         0.2px  3px rgb(194, 26, 26),
-         0.2px  4px rgb(158, 19, 19),
-         0.2px  5px rgb(124, 10, 10),
-         0.2px  6px rgb(63, 8, 8);
+        0.6px -0.6px 0 yellow,
+        -0.6px 0.6px 0 yellow,
+        0.6px 0.6px 0 yellow,
+        0.2px 2px rgb(212, 28, 28),
+        0.2px 3px rgb(194, 26, 26),
+        0.2px 4px rgb(158, 19, 19),
+        0.2px 5px rgb(124, 10, 10),
+        0.2px 6px rgb(63, 8, 8);
 }
 
 /* ====== КАРУСЕЛЬ БАННЕРА ====== */
 .carousel,
 .carousel-inner,
 .carousel-item {
-    height: 300px; 
+    height: 300px;
     width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     padding: 0 !important;
-}
-
-.banner-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
+}   
 .carousel {
     position: absolute;
     top: 0;
     left: 0;
 }
-/* ====== БЛОКИ КОНТЕНТА ====== */
+ /* ====== БЛОКИ КОНТЕНТА ====== */
 .section {
     padding: 40px 60px;
 }
-h2{
-    font-family: 'Russo One', sans-serif;
-}
-/* ====== КАРТОЧКИ НА ГЛАВНОЙ ====== */
+ /* ====== КАРТОЧКИ НА ГЛАВНОЙ ====== */
 .film-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -168,14 +153,14 @@ h2{
     background: #1b1b1b;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
-.card h3{
-    font-family: 'Russo One', sans-serif;;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 .card img {
     width: 100%;
     border-radius: 10px;
+}
+.card h3 {
+    font-family: 'Russo One', sans-serif;
 }
 /* ====== НИЖНЯЯ ЧАСТЬ СТРАНИЦЫ ====== */
 footer {
@@ -186,12 +171,9 @@ footer {
 }
 /* ====== СЮЖЕТ — БЛОКИ ====== */
 .story-section {
-    margin-top: 40px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin: 40px 150px;
 }
 .story-block {
-    margin-left: 0px; 
     display: flex;
     align-items: center;
     margin-bottom: 80px;
@@ -199,13 +181,11 @@ footer {
 }
 .story-block img {
     height: 475px;
-    width: auto;
     object-fit: cover;
     border-radius: 10px;
 }
-/* ТЕКСТ В БЛОКАХ  */
 .story-text h2 {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Russo One';
     margin-bottom: 15px;
 }
 .story-text p {
@@ -227,26 +207,26 @@ footer {
         0 0 30px #5436ff;
     transform: scale(1.05);
 }
-.modal-link{
-        transition: 0.25s ease;
-        cursor: pointer;
+.modal-link {
+    cursor: pointer;
+    transition: 0.25s ease;
 }
-.modal-link:hover{
-    color: #baabfa;                    
-    text-shadow: 
-        0 0 6px #6a49fddc, 
-        0 0 12px #55cfff, 
-        0 0 18px #9f6bff;               
-    transform: scale(1.05); 
+.modal-link:hover {
+    color: #baabfa;
+    text-shadow:
+        0 0 6px #6a49fddc,
+        0 0 12px #55cfff,
+        0 0 18px #9f6bff;
+    transform: scale(1.05);
 }
-/* МОДальное окно */
-.modal-spider{
+/* ====== МОДАЛЬНОЕ ОКНО ====== */
+.modal-spider {
     background: #111;
-    color: #fff;
+    color: #eee;
     border-radius: 12px;
-    border: 2px solid #8b0b0b3d;
+    border: 1px solid #3b0f0f;
 }
-/* ====== Персонажи ====== */
+/* ====== ПЕРСОНАЖИ ====== */
 .character-card {
     background: #1d1d1d;
     border-radius: 10px;
@@ -256,20 +236,14 @@ footer {
 }
 .character-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 12px rgba(255,0,0,0.35);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.35);
 }
 .character-card img {
     height: 330px;
-    object-fit: cover;
     width: 100%;
+    object-fit: cover;
 }
-.modal-spider {
-    background: #111;
-    color: #eee;
-    border-radius: 12px;
-    border: 1px solid #3b0f0f;
-}
-/* ФАКТЫ */
+/* ====== ФАКТЫ ====== */
 .fact-card {
     border-radius: 15px;
     transition: 0.3s;
@@ -283,10 +257,13 @@ footer {
     object-fit: cover;
     border-bottom: 1px solid #333;
 }
-.photo{
+/* ====== ФОТО ====== */
+.photo {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     opacity: 70%;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
 }
 /* === ГЛОССАРИЙ === */
 .glossary-card {
@@ -298,8 +275,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding: 15px 0 10px;
     background: #0f0f0f;
     border-bottom: 1px solid #222;
 }
@@ -315,9 +291,8 @@ footer {
     transform: scale(1.03);
     box-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
 }
-
 .glossary-title {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Russo One';
     margin-top: 12px;
     font-size: 22px;
 }
@@ -328,65 +303,52 @@ footer {
 .glossary-image {
     width: 70%;
     max-width: 70px;
-    border-radius: 5px;
     object-fit: contain;
+    border-radius: 5px;
+    margin: 0 auto;
     display: block;
-    margin: 0 auto;
 }
-/* about */
-.photo{
-    max-width: 300px; 
-    max-height: 300px;
-    margin: 0 auto;
-}
-/*
-      АДАПТИВ ДЛЯ МОБ. УСТРОЙСТВ
-*/
+/* ====== АДАПТИВ ДЛЯ МОБ ====== */
 @media (max-width: 768px) {
-    html, body {
+
+    html,
+    body {
         overflow-x: hidden !important;
     }
+
     .navbar-brand img {
         width: 45px !important;
-        height: auto !important;
     }
+
     .banner {
         height: 180px !important;
     }
+
     .carousel,
     .carousel-inner,
     .carousel-item {
         height: 180px !important;
     }
+
     .banner-title {
         font-size: 38px !important;
         padding: 0 !important;
         top: 55%;
     }
-    /* 
-       ГЛАВНАЯ
-*/
-    .film-cards {
-        grid-template-columns: 1fr !important; 
+
+.film-cards {
+        grid-template-columns: 1fr !important;
         gap: 25px !important;
         padding: 10px;
     }
 
-    .card img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* 
-       Блоки сюжета
- */
     .story-section {
         margin-left: 15px !important;
         margin-right: 15px !important;
     }
 
     .story-block {
-        flex-direction: column !important; 
+        flex-direction: column !important;
         text-align: center !important;
         gap: 20px !important;
     }
@@ -402,28 +364,19 @@ footer {
         padding: 0 10px !important;
     }
 
-    /* 
-       Персонажи*/
     .character-card img {
         height: auto !important;
         max-height: 280px !important;
-        object-fit: cover;
     }
 
     .modal-dialog {
         max-width: 95% !important;
     }
 
-    /* 
-      факты
- */
     .fact-card img {
         height: auto !important;
     }
 
-    /* 
-       глоссарий
- */
     .glossary-img {
         width: 100% !important;
         max-height: 220px !important;
@@ -434,14 +387,38 @@ footer {
         max-width: 120px !important;
     }
 
-    /* 
-    ABOUT
-*/
     .photo {
         max-width: 80% !important;
     }
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
         text-align: center !important;
         line-height: 1.2;
     }
+}
+/* ====== КНОПКИ ПЕРЕХОДА ====== */
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+.bottom-card {
+    font-family: 'Russo One', sans-serif;
+    width: 250px;
+    padding: 8px 0;
+    background: #111;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #444;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.bottom-card:hover {
+    background: #222;
+    border-color: #666;
+    transform: translateY(-2px);
 }
