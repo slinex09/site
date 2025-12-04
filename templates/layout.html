@@ -6,7 +6,8 @@
     <link rel="icon" type="image/png" href="/static/image/logo.png">
     <title>{{ name }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="/static/main.css?v=500">
+    <button id="toTopBtn" title="Наверх">↑</button>
 </head>
 <body>
     {% include "components/_navigation.html" %}
@@ -19,6 +20,20 @@
         tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
     });
     </script>
+    <script>
+    const toTopBtn = document.getElementById("toTopBtn");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 125 || document.documentElement.scrollTop > 125) {
+            toTopBtn.style.display = "flex";
+        } else {
+            toTopBtn.style.display = "none";
+        }
+    };
+
+    toTopBtn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+</script>
     <footer>
 <p>© 2025 сайт о Человеке-пауке</p>
 Связь: tabixa09@gmail.com
