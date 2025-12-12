@@ -34,6 +34,27 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hash = decodeURIComponent(window.location.hash.substring(1));
+    if (!hash) return;
+
+    const el = document.getElementById(hash);
+    if (!el) return;
+    if (el.classList.contains("character-card")) {
+        el.classList.add("highlight");
+        setTimeout(() => {
+            el.classList.remove("highlight");
+        }, 3500);
+    }
+    if (el.classList.contains("card-title")) {
+        el.classList.add("highlight");
+        setTimeout(() => {
+            el.classList.remove("highlight");
+        }, 3500);
+    }
+});
+</script>
     <footer>
 <p>© 2025 сайт о Человеке-пауке</p>
 Связь: tabixa09@gmail.com
