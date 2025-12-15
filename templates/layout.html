@@ -41,13 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const el = document.getElementById(hash);
     if (!el) return;
-    if (el.classList.contains("character-card")) {
-        el.classList.add("highlight");
-        setTimeout(() => {
-            el.classList.remove("highlight");
-        }, 3500);
-    }
-    if (el.classList.contains("card-title")) {
+
+    if (
+        el.classList.contains("character-card") ||
+        el.classList.contains("card-title") ||
+        el.classList.contains("story-block")
+    ) {
         el.classList.add("highlight");
         setTimeout(() => {
             el.classList.remove("highlight");
